@@ -1,0 +1,17 @@
+package my.ftp.client.Comands;
+
+import org.apache.commons.net.ftp.FTPClient;
+
+import java.io.IOException;
+
+public class CLOSE implements Comand {
+    FTPClient client;
+
+    public CLOSE (FTPClient client) {
+        this.client = client;
+    }
+
+    public void execute () throws IOException {
+        client.disconnect ();
+    }
+}
